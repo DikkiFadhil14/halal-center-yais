@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAL CENTER YAIS - Yayasan Ibadiya Al Shalihun</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration for Custom Theme Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldCustom: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#059669',
+                            700: '#0f766e',
+                            800: '#0d5c3a',
+                            900: '#064e3b',
+                        },
+                        goldCustom: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .islamic-pattern {
+            background-color: #0d5c3a;
+            background-image: radial-gradient(#d97706 0.75px, transparent 0.75px), radial-gradient(#d97706 0.75px, #0d5c3a 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0,15px 15px;
+            background-opacity: 0.1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0d5c3a 0%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #d97706 0%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-emeraldCustom-600 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-emeraldCustom-900 text-emerald-100 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-mx-auto flex flex-col md:flex-row justify-between items-center container mx-auto gap-2">
+            <div class="flex items-center gap-2">
+                <span class="bg-goldCustom-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">RESMI</span>
+                <span>Pusat Layanan & Pendampingan Ekosistem Jaminan Produk Halal YAIS</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <a href="tel:+6281234567890" class="hover:text-goldCustom-400 transition flex items-center gap-1">
+                    <i class="fas fa-phone-alt text-[10px]"></i> +62 812-0000-0000
+                </a>
+                <a href="mailto:info@halalcenter-yais.or.id" class="hover:text-goldCustom-400 transition flex items-center gap-1">
+                    <i class="fas fa-envelope text-[10px]"></i> yaishalalcenter@hcloud.my.id
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emeraldCustom-800 to-emeraldCustom-600 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition transform">
+                        <img
+    src="https://drive.google.com/thumbnail?id=1m8MWnrCtVwKyiVTL0V4bz0QVUBIVSpJc&sz=w500"
+    alt="Certificate"
+    class="w-8 h-8 object-contain"
+>
+                    </div>
+                    <div>
+                        <span class="block font-extrabold text-lg sm:text-xl text-emeraldCustom-800 tracking-tight leading-none">HALAL CENTER</span>
+                        <span class="block font-semibold text-xs text-goldCustom-600 tracking-widest uppercase mt-0.5">YAYASAN IBADIYA AL SHALIHUN</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#beranda" class="text-slate-700 hover:text-emeraldCustom-800 font-medium text-sm transition">Beranda</a>
+                    <a href="#tentang" class="text-slate-700 hover:text-emeraldCustom-800 font-medium text-sm transition">Tentang Kami</a>
+                    <a href="#lembaga" class="text-slate-700 hover:text-emeraldCustom-800 font-medium text-sm transition">Unit Lembaga</a>
+                    <a href="#layanan" class="text-slate-700 hover:text-emeraldCustom-800 font-medium text-sm transition">Layanan</a>
+                    <a href="#alur" class="text-slate-700 hover:text-emeraldCustom-800 font-medium text-sm transition">Alur Sertifikasi</a>
+                    <a href="#faq" class="text-slate-700 hover:text-emeraldCustom-800 font-medium text-sm transition">FAQ</a>
+                </div>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="#kontak" class="bg-gradient-to-r from-emeraldCustom-800 to-emeraldCustom-700 hover:from-emeraldCustom-900 hover:to-emeraldCustom-800 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>Konsultasi Halal</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-emeraldCustom-800 hover:bg-slate-100 focus:outline-none">
+                        <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block py-2 text-slate-700 hover:text-emeraldCustom-800 font-medium text-base border-b border-slate-100">Beranda</a>
+            <a href="#tentang" class="block py-2 text-slate-700 hover:text-emeraldCustom-800 font-medium text-base border-b border-slate-100">Tentang Kami</a>
+            <a href="#lembaga" class="block py-2 text-slate-700 hover:text-emeraldCustom-800 font-medium text-base border-b border-slate-100">Unit Lembaga (LP3H & LPH)</a>
+            <a href="#layanan" class="block py-2 text-slate-700 hover:text-emeraldCustom-800 font-medium text-base border-b border-slate-100">Layanan Halal</a>
+            <a href="#alur" class="block py-2 text-slate-700 hover:text-emeraldCustom-800 font-medium text-base border-b border-slate-100">Alur Sertifikasi</a>
+            <a href="#faq" class="block py-2 text-slate-700 hover:text-emeraldCustom-800 font-medium text-base border-b border-slate-100">FAQ</a>
+            <div class="pt-2">
+                <a href="#kontak" class="w-full text-center bg-emeraldCustom-800 text-white font-semibold py-3 rounded-xl shadow transition block">
+                    <i class="fab fa-whatsapp mr-2"></i> Konsultasi Halal Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-emeraldCustom-900 to-emeraldCustom-800 text-white py-20 lg:py-28">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10 islamic-pattern"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-goldCustom-500/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-emeraldCustom-600/30 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-emeraldCustom-700/60 border border-emeraldCustom-500/30 backdrop-blur-md px-4 py-1.5 rounded-full text-goldCustom-400 text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fas fa-check-circle"></i> Integrasi Layanan LP3H YAIS & LPH YAIS
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Mewujudkan <span class="gold-gradient-text">Ekosistem Halal</span> Terpercaya & Profesional
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        HALAL CENTER YAIS (Yayasan Ibadiya Al Shalihun) hadir memberikan pendampingan dan pemeriksaan halal terintegrasi demi kenyamanan umat dan keberkahan usaha Anda.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#kontak" class="w-full sm:w-auto bg-gradient-to-r from-goldCustom-500 to-goldCustom-600 hover:from-goldCustom-600 hover:to-goldCustom-700 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-goldCustom-500/20 transition transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <span>Mulai Sertifikasi Halal</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#lembaga" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl transition text-center">
+                            Pelajari Unit Lembaga
+                        </a>
+                    </div>
+
+                    <!-- Mini Highlights -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-goldCustom-400">100%</p>
+                            <p class="text-xs text-slate-300">Resmi & Sesuai BPJPH</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-goldCustom-400">2 Unit</p>
+                            <p class="text-xs text-slate-300">LP3H & LPH Terpadu</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-goldCustom-400">Ribuan</p>
+                            <p class="text-xs text-slate-300">Produk Terfasilitasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Card & Badges -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Visual Card -->
+                        <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/15 backdrop-blur-xl p-8 rounded-3xl shadow-2xl relative">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-6 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-2xl bg-emeraldCustom-700 flex items-center justify-center text-goldCustom-400 font-bold text-2xl shadow">
+                                        <i class="fas fa-hand-holding-heart"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-white">Ekosistem Halal YAIS</h3>
+                                        <p class="text-xs text-slate-300">Yayasan Ibadiya Al Shalihun</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 rounded-full text-xs font-semibold">Aktif</span>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="bg-slate-900/60 p-4 rounded-2xl border border-white/5 flex items-start gap-4">
+                                    <div class="p-3 bg-emeraldCustom-600/30 text-emerald-400 rounded-xl">
+                                        <i class="fas fa-user-check text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">LP3H YAIS</h4>
+                                        <p class="text-xs text-slate-300 mt-0.5">Pendampingan Proses Produk Halal untuk UMKM (Self Declare / Sehati).</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-slate-900/60 p-4 rounded-2xl border border-white/5 flex items-start gap-4">
+                                    <div class="p-3 bg-goldCustom-500/20 text-goldCustom-400 rounded-xl">
+                                        <i class="fas fa-microscope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">LPH YAIS</h4>
+                                        <p class="text-xs text-slate-300 mt-0.5">Lembaga Pemeriksa Halal untuk pengujian & audit produk skala Reguler.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
+                                <span><i class="fas fa-shield-alt text-emerald-400 mr-1"></i> Terpercaya & Akuntabel</span>
+                                <span><i class="fas fa-clock text-goldCustom-400 mr-1"></i> Proses Cepat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emeraldCustom-700 font-extrabold text-sm uppercase tracking-wider bg-emeraldCustom-50 px-4 py-1.5 rounded-full">Tentang Kami</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Mengenal HALAL CENTER YAIS</h2>
+                <div class="w-16 h-1 bg-goldCustom-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <h3 class="text-2xl font-bold text-emeraldCustom-800 mb-4 flex items-center gap-3">
+                            <i class="fas fa-building text-goldCustom-600"></i>
+                            Pusat Layanan Jaminan Halal
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            <strong class="text-slate-800">HALAL CENTER YAIS</strong> merupakan pusat layanan yang berada di bawah <strong>Yayasan Ibadiya Al Shalihun (YAIS)</strong> dan hadir untuk memberikan layanan serta pendampingan dalam ekosistem jaminan produk halal.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Kami mengintegrasikan layanan pendampingan proses produk halal melalui <strong>LP3H YAIS</strong> dan layanan pemeriksaan halal melalui <strong>LPH YAIS</strong> guna memastikan produk usaha Anda memenuhi standar halal ketat, halal thayyib, dan sesuai regulasi BPJPH Kementerian Agama RI.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 bg-emeraldCustom-50 rounded-2xl border border-emeraldCustom-100">
+                            <div class="w-10 h-10 rounded-xl bg-emeraldCustom-800 text-white flex items-center justify-center font-bold mb-3">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h4 class="font-bold text-emeraldCustom-900 text-base mb-1">Visi Kami</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Menjadi pusat sertifikasi & ekosistem jaminan produk halal terdepan yang profesional, terpercaya, dan amanah.
+                            </p>
+                        </div>
+                        <div class="p-5 bg-amber-50 rounded-2xl border border-amber-100">
+                            <div class="w-10 h-10 rounded-xl bg-goldCustom-600 text-white flex items-center justify-center font-bold mb-3">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Misi Utama</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Memfasilitasi UMKM & industri dalam proses sertifikasi halal secara transparan, mudah, dan akurat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="relative">
+                        <div class="bg-gradient-to-tr from-emeraldCustom-800 to-emeraldCustom-600 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                            <i class="fas fa-quran absolute -right-10 -bottom-10 text-white/10 text-9xl"></i>
+                            <h3 class="text-xl font-bold text-goldCustom-400 mb-2">Nilai Utama Kebangsaan & Syariah</h3>
+                            <p class="text-slate-100 text-sm leading-relaxed mb-6">
+                                Mengutamakan ketelitian syariah, kepastian hukum, dan pelayanan ramah pelaku usaha demi kenyamanan konsumsi seluruh masyarakat.
+                            </p>
+
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4 bg-white/10 p-3.5 rounded-xl border border-white/10">
+                                    <div class="w-8 h-8 rounded-full bg-goldCustom-500 text-slate-950 font-bold flex items-center justify-center text-sm">1</div>
+                                    <div>
+                                        <p class="font-bold text-sm">Integritas & Syariah</p>
+                                        <p class="text-xs text-slate-200">Sesuai ketentuan fatwa MUI dan regulasi pemerintah.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 bg-white/10 p-3.5 rounded-xl border border-white/10">
+                                    <div class="w-8 h-8 rounded-full bg-goldCustom-500 text-slate-950 font-bold flex items-center justify-center text-sm">2</div>
+                                    <div>
+                                        <p class="font-bold text-sm">Pelayanan Cepat & Tepat</p>
+                                        <p class="text-xs text-slate-200">Prosedur efisien dengan bimbingan dari tenaga ahli berpengalaman.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 bg-white/10 p-3.5 rounded-xl border border-white/10">
+                                    <div class="w-8 h-8 rounded-full bg-goldCustom-500 text-slate-950 font-bold flex items-center justify-center text-sm">3</div>
+                                    <div>
+                                        <p class="font-bold text-sm">Pendampingan Berkelanjutan</p>
+                                        <p class="text-xs text-slate-200">Edukasi secara konsisten untuk menjaga Sistem Jaminan Halal (SJH).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Dua Lembaga Utama di bawah YAIS -->
+    <section id="lembaga" class="py-20 bg-slate-50 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emeraldCustom-700 font-extrabold text-sm uppercase tracking-wider bg-emeraldCustom-100/60 px-4 py-1.5 rounded-full">Struktur Organisasi</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">2 Lembaga di Bawah YAIS</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                    Yayasan Ibadiya Al Shalihun memayungi dua lembaga fungsional untuk mencakup seluruh lini pendaftaran sertifikasi halal.
+                </p>
+                <div class="w-16 h-1 bg-goldCustom-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- LP3H YAIS Card -->
+                <div class="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-14 h-14 rounded-2xl bg-emeraldCustom-100 text-emeraldCustom-800 flex items-center justify-center text-2xl font-bold group-hover:bg-emeraldCustom-800 group-hover:text-white transition">
+                                <img
+    src="https://drive.google.com/thumbnail?id=1m8MWnrCtVwKyiVTL0V4bz0QVUBIVSpJc&sz=w500"
+    alt="Certificate"
+    class="w-8 h-8 object-contain"
+>
+                            </span>
+                            <span class="bg-emeraldCustom-50 text-emeraldCustom-800 text-xs font-bold px-3 py-1 rounded-full border border-emeraldCustom-200">
+                                Self Declare / UMKM
+                            </span>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-slate-900 mb-2">1. LP3H YAIS</h3>
+                        <p class="text-xs font-semibold text-emeraldCustom-700 mb-4 uppercase tracking-wider">
+                            Lembaga Pendamping Proses Produk Halal
+                        </p>
+                        
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            LP3H YAIS berfokus pada layanan pendampingan bagi Pelaku Usaha Mikro dan Kecil (UMKM). Lembaga ini menaungi para Pendamping PPH yang terlatih untuk membimbing verifikasi bahan dan proses produk halal secara cuma-cuma/reguler.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fas fa-check-circle text-emeraldCustom-600 mt-1"></i>
+                                <span>Pendampingan Program Sertifikasi Halal Gratis (SEHATI)</span>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fas fa-check-circle text-emeraldCustom-600 mt-1"></i>
+                                <span>Pelatihan & Rekrutmen Pendamping PPH Professional</span>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fas fa-check-circle text-emeraldCustom-600 mt-1"></i>
+                                <span>Verifikasi & Validasi Pernyataan Pelaku Usaha (Self Declare)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('modal-lp3h')" class="w-full py-3 px-4 bg-slate-100 hover:bg-emeraldCustom-800 hover:text-white text-slate-800 font-bold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                        <span>Detail Layanan LP3H</span>
+                        <i class="fas fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- LPH YAIS Card -->
+                <div class="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition border border-slate-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-14 h-14 rounded-2xl bg-amber-100 text-goldCustom-700 flex items-center justify-center text-2xl font-bold group-hover:bg-goldCustom-600 group-hover:text-white transition">
+                                <img
+    src="https://drive.google.com/thumbnail?id=1m8MWnrCtVwKyiVTL0V4bz0QVUBIVSpJc&sz=w500"
+    alt="Certificate"
+    class="w-8 h-8 object-contain"
+>
+                            </span>
+                            <span class="bg-amber-50 text-goldCustom-700 text-xs font-bold px-3 py-1 rounded-full border border-amber-200">
+                                Jalur Reguler & Industri
+                            </span>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-slate-900 mb-2">2. LPH YAIS</h3>
+                        <p class="text-xs font-semibold text-goldCustom-700 mb-4 uppercase tracking-wider">
+                            Lembaga Pemeriksa Halal
+                        </p>
+                        
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            LPH YAIS berwenang melakukan pemeriksaan, pengujian, dan audit kehalalan produk secara komprehensif untuk skala menengah, besar, maupun produk risiko tinggi sebelum sidang fatwa MUI.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fas fa-check-circle text-goldCustom-600 mt-1"></i>
+                                <span>Pemeriksaan & Audit Halal Skala Reguler / Menengah-Besar</span>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fas fa-check-circle text-goldCustom-600 mt-1"></i>
+                                <span>Inspeksi Lapangan oleh Auditor Halal Bersertifikasi</span>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm text-slate-700">
+                                <i class="fas fa-check-circle text-goldCustom-600 mt-1"></i>
+                                <span>Pengujian Laboratorium & Penyusunan Laporan Audit LPH</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('modal-lph')" class="w-full py-3 px-4 bg-slate-100 hover:bg-goldCustom-600 hover:text-white text-slate-800 font-bold rounded-xl transition text-sm flex items-center justify-center gap-2">
+                        <span>Detail Layanan LPH</span>
+                        <i class="fas fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emeraldCustom-700 font-extrabold text-sm uppercase tracking-wider bg-emeraldCustom-50 px-4 py-1.5 rounded-full">Layanan Kami</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Layanan Unggulan Halal Center YAIS</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                    Solusi komprehensif untuk memenuhi standar Sistem Jaminan Produk Halal (SJPH).
+                </p>
+                <div class="w-16 h-1 bg-goldCustom-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emeraldCustom-300 transition duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-emeraldCustom-800 text-goldCustom-400 rounded-xl flex items-center justify-center text-xl mb-4 shadow">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Pendampingan UMKM</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Pendampingan intensif bagi usaha mikro dan kecil untuk mendapatkan sertifikat halal program Self Declare (SEHATI).
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emeraldCustom-300 transition duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-emeraldCustom-800 text-goldCustom-400 rounded-xl flex items-center justify-center text-xl mb-4 shadow">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Audit & Pemeriksaan</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Audit resmi oleh LPH YAIS mencakup verifikasi dokumen, inspeksi pabrik/dapur, dan pengujian kehalalan bahan.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emeraldCustom-300 transition duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-emeraldCustom-800 text-goldCustom-400 rounded-xl flex items-center justify-center text-xl mb-4 shadow">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Pelatihan & Edukasi</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Pelatihan untuk Penyelia Halal, Pendamping PPH, serta sosialisasi kesadaran halal bagi masyarakat dan industri.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emeraldCustom-300 transition duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-emeraldCustom-800 text-goldCustom-400 rounded-xl flex items-center justify-center text-xl mb-4 shadow">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Konsultasi BPJPH</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Bimbingan penyiapan pendaftaran akun SIHALAL, kelengkapan berkas, serta konsultasi regulasi halal pemerintah.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Certification Workflow Section -->
+    <section id="alur" class="py-20 bg-emeraldCustom-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-goldCustom-400 font-extrabold text-sm uppercase tracking-wider bg-white/10 px-4 py-1.5 rounded-full backdrop-blur-sm">Panduan Prosedur</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Alur Pengajuan Sertifikasi Halal</h2>
+                <p class="text-slate-300 mt-3 text-sm sm:text-base">
+                    Klik setiap tahapan di bawah ini untuk melihat detail langkah-langkah pendaftaran.
+                </p>
+                <div class="w-16 h-1 bg-goldCustom-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Steps Controller -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <button onclick="setWorkflowStep(1)" id="step-btn-1" class="workflow-btn p-4 rounded-2xl bg-goldCustom-500 text-slate-950 font-bold text-center transition border-2 border-goldCustom-500 shadow-lg">
+                    <span class="block text-xs uppercase tracking-wider opacity-80">Langkah 01</span>
+                    <span class="text-sm sm:text-base">Registrasi SIHALAL</span>
+                </button>
+                <button onclick="setWorkflowStep(2)" id="step-btn-2" class="workflow-btn p-4 rounded-2xl bg-emeraldCustom-800/80 text-white font-bold text-center transition border-2 border-transparent hover:border-emeraldCustom-600">
+                    <span class="block text-xs uppercase tracking-wider text-emerald-300">Langkah 02</span>
+                    <span class="text-sm sm:text-base">Pendampingan / Audit</span>
+                </button>
+                <button onclick="setWorkflowStep(3)" id="step-btn-3" class="workflow-btn p-4 rounded-2xl bg-emeraldCustom-800/80 text-white font-bold text-center transition border-2 border-transparent hover:border-emeraldCustom-600">
+                    <span class="block text-xs uppercase tracking-wider text-emerald-300">Langkah 03</span>
+                    <span class="text-sm sm:text-base">Sidang Fatwa MUI</span>
+                </button>
+                <button onclick="setWorkflowStep(4)" id="step-btn-4" class="workflow-btn p-4 rounded-2xl bg-emeraldCustom-800/80 text-white font-bold text-center transition border-2 border-transparent hover:border-emeraldCustom-600">
+                    <span class="block text-xs uppercase tracking-wider text-emerald-300">Langkah 04</span>
+                    <span class="text-sm sm:text-base">Terbit Sertifikat</span>
+                </button>
+            </div>
+
+            <!-- Dynamic Workflow Content Box -->
+            <div class="bg-slate-800/90 border border-white/10 rounded-3xl p-6 sm:p-10 backdrop-blur-xl">
+                <!-- Content Step 1 -->
+                <div id="workflow-content-1" class="workflow-panel">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="w-16 h-16 rounded-2xl bg-goldCustom-500/20 text-goldCustom-400 flex items-center justify-center text-3xl font-bold flex-shrink-0">
+                            1
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-bold text-white">Langkah 1: Registrasi Akun & Pengajuan SIHALAL</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Pelaku usaha melakukan pendaftaran melalui portal resmi BPJPH (sehalal.kemenag.go.id). Masukkan data pelaku usaha, data produk, bahan baku, dan pilih lembaga pendamping (LP3H YAIS) atau Lembaga Pemeriksa Halal (LPH YAIS).
+                            </p>
+                            <div class="pt-2 flex flex-wrap gap-2">
+                                <span class="bg-white/10 text-xs px-3 py-1 rounded-full text-slate-200"><i class="fas fa-file-alt mr-1"></i> NIB / Izin Usaha</span>
+                                <span class="bg-white/10 text-xs px-3 py-1 rounded-full text-slate-200"><i class="fas fa-utensils mr-1"></i> Daftar Bahan & Produk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Step 2 -->
+                <div id="workflow-content-2" class="workflow-panel hidden">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="w-16 h-16 rounded-2xl bg-goldCustom-500/20 text-goldCustom-400 flex items-center justify-center text-3xl font-bold flex-shrink-0">
+                            2
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-bold text-white">Langkah 2: Proses Pendampingan (LP3H) atau Audit Lapangan (LPH)</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                - <strong>Jalur Self Declare (LP3H YAIS):</strong> Pendamping PPH mendampingi verifikasi bahan dan kriteria halal.<br>
+                                - <strong>Jalur Reguler (LPH YAIS):</strong> Auditor Halal LPH YAIS melakukan verifikasi dokumen, inspeksi pabrik/lokasi produksi, serta pengujian sampel jika diperlukan.
+                            </p>
+                            <div class="pt-2 flex flex-wrap gap-2">
+                                <span class="bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full"><i class="fas fa-user-check mr-1"></i> Verifikasi PPH</span>
+                                <span class="bg-goldCustom-500/20 text-goldCustom-300 text-xs px-3 py-1 rounded-full"><i class="fas fa-search-plus mr-1"></i> Audit LPH YAIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Step 3 -->
+                <div id="workflow-content-3" class="workflow-panel hidden">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="w-16 h-16 rounded-2xl bg-goldCustom-500/20 text-goldCustom-400 flex items-center justify-center text-3xl font-bold flex-shrink-0">
+                            3
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-bold text-white">Langkah 3: Sidang Fatwa Kehalalan Produk (MUI)</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Laporan hasil verifikasi pendamping PPH atau hasil pemeriksaan auditor LPH YAIS diserahkan ke Komite Fatwa / MUI untuk pembahasan penetapan kehalalan produk.
+                            </p>
+                            <div class="pt-2">
+                                <span class="bg-white/10 text-xs px-3 py-1 rounded-full text-slate-200"><i class="fas fa-gavel mr-1"></i> Penetapan Ketetapan Halal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Step 4 -->
+                <div id="workflow-content-4" class="workflow-panel hidden">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="w-16 h-16 rounded-2xl bg-goldCustom-500/20 text-goldCustom-400 flex items-center justify-center text-3xl font-bold flex-shrink-0">
+                            4
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-bold text-white">Langkah 4: Penerbitan Sertifikat Halal BPJPH</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Berdasarkan Ketetapan Halal dari Majelis Ulama Indonesia, BPJPH menerbitkan Sertifikat Halal resmi yang dapat diunduh secara digital dan dicantumkan pada kemasan produk Anda.
+                            </p>
+                            <div class="pt-2">
+                                <span class="bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full"><i class="fas fa-award mr-1"></i> Sertifikat Halal Resmi Terbit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-emeraldCustom-700 font-extrabold text-sm uppercase tracking-wider bg-emeraldCustom-100/60 px-4 py-1.5 rounded-full">Tanya Jawab</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Pertanyaan Sering Diajukan (FAQ)</h2>
+                <div class="w-16 h-1 bg-goldCustom-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <span>Apa perbedaan antara LP3H YAIS dan LPH YAIS?</span>
+                        <i id="faq-icon-1" class="fas fa-chevron-down text-emeraldCustom-700 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-1" class="px-6 pb-6 text-sm text-slate-600 leading-relaxed hidden">
+                        LP3H YAIS (Lembaga Pendamping Proses Produk Halal) bertugas mendampingi pelaku usaha mikro dan kecil (UMKM) dalam skema Self Declare. Sedangkan LPH YAIS (Lembaga Pemeriksa Halal) berwenang melakukan audit/pemeriksaan fisik dan laboratorium secara langsung untuk usaha skala sedang, besar, maupun produk berisiko tinggi.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <span>Apakah UMKM bisa mendapatkan sertifikat halal secara gratis?</span>
+                        <i id="faq-icon-2" class="fas fa-chevron-down text-emeraldCustom-700 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-2" class="px-6 pb-6 text-sm text-slate-600 leading-relaxed hidden">
+                        Ya! Bagi UMKM yang memenuhi kriteria Self Declare (bahan baku sudah dipastikan halal sederhana dan proses produksi tidak rumit), dapat memanfaatkan program Sertifikasi Halal Gratis (SEHATI) melalui pendampingan LP3H YAIS.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <span>Persyaratan apa saja yang perlu disiapkan?</span>
+                        <i id="faq-icon-3" class="fas fa-chevron-down text-emeraldCustom-700 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-3" class="px-6 pb-6 text-sm text-slate-600 leading-relaxed hidden">
+                        Syarat utama meliputi NIB (Nomor Induk Berusaha), KTP pemilik usaha, daftar produk dan foto produk, serta daftar bahan baku beserta bukti sertifikat halal bahan (jika ada). Tim HALAL CENTER YAIS siap membimbing penyiapan berkas ini.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center focus:outline-none">
+                        <span>Berapa lama proses pembuatan sertifikat halal?</span>
+                        <i id="faq-icon-4" class="fas fa-chevron-down text-emeraldCustom-700 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-4" class="px-6 pb-6 text-sm text-slate-600 leading-relaxed hidden">
+                        Sesuai standar BPJPH, proses sertifikasi jalur Self Declare memakan waktu sekitar 12-21 hari kerja. Untuk jalur reguler LPH tergantung pada kelengkapan dokumen serta audit lapangan.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Form Section -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Contact Info Left -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-emeraldCustom-700 font-extrabold text-sm uppercase tracking-wider bg-emeraldCustom-50 px-4 py-1.5 rounded-full">Hubungi Kami</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Konsultasi Layanan Halal Bersama YAIS</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Ingin mendaftar sertifikasi halal atau butuh penjelasan lebih lanjut mengenai LP3H & LPH YAIS? Silakan kirimkan pesan atau hubungi sekretariat kami.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emeraldCustom-100 text-emeraldCustom-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">Alamat Kantor Pusat</h4>
+                                <p class="text-xs text-slate-600">Gedung Halal Center YAIS - Yayasan Ibadiya Al Shalihun, Indonesia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emeraldCustom-100 text-emeraldCustom-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">Telepon & WhatsApp</h4>
+                                <p class="text-xs text-slate-600">+62 812-000-0000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emeraldCustom-100 text-emeraldCustom-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">Email Resmi</h4>
+                                <p class="text-xs text-slate-600">info@halalcenter-yais.or.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Right -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-lg">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">Formulir Pendaftaran Konsultasi</h3>
+                        <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                                    <input type="text" id="form-name" required placeholder="Contoh: Ahmad Fauzi" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emeraldCustom-600 focus:outline-none text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nama Usaha / Produk</label>
+                                    <input type="text" id="form-business" required placeholder="Contoh: Dapur Halal Barokah" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emeraldCustom-600 focus:outline-none text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nomor WhatsApp</label>
+                                    <input type="tel" id="form-phone" required placeholder="08123456789" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emeraldCustom-600 focus:outline-none text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Layanan yang Dituju</label>
+                                    <select id="form-service" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emeraldCustom-600 focus:outline-none text-sm">
+                                        <option value="LP3H YAIS - Pendampingan UMKM (Self Declare)">LP3H YAIS (Pendampingan UMKM / SEHATI)</option>
+                                        <option value="LPH YAIS - Audit Pemeriksaan Halal (Reguler)">LPH YAIS (Audit Pemeriksaan Reguler)</option>
+                                        <option value="Konsultasi Umum Halal">Konsultasi Umum & Pelatihan</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Pesan / Pertanyaan Spesifik</label>
+                                <textarea id="form-message" rows="4" placeholder="Tuliskan detail usaha atau pertanyaan Anda..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emeraldCustom-600 focus:outline-none text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-emeraldCustom-800 to-emeraldCustom-700 hover:from-emeraldCustom-900 hover:to-emeraldCustom-800 text-white font-bold py-4 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                                <span>Kirim via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emeraldCustom-700 flex items-center justify-center text-white font-bold text-lg">
+                            <img
+    src="https://drive.google.com/thumbnail?id=1m8MWnrCtVwKyiVTL0V4bz0QVUBIVSpJc&sz=w500"
+    alt="Certificate"
+    class="w-8 h-8 object-contain"
+>
+                        </div>
+                        <span class="font-extrabold text-xl text-white tracking-tight">HALAL CENTER YAIS</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-md">
+                        HALAL CENTER YAIS berada di bawah Yayasan Ibadiya Al Shalihun (YAIS). Mengintegrasikan LP3H YAIS & LPH YAIS untuk pendampingan dan pemeriksaan halal terpercaya.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#beranda" class="hover:text-emerald-400 transition">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-emerald-400 transition">Tentang Kami</a></li>
+                        <li><a href="#lembaga" class="hover:text-emerald-400 transition">LP3H & LPH YAIS</a></li>
+                        <li><a href="#layanan" class="hover:text-emerald-400 transition">Layanan Halal</a></li>
+                        <li><a href="#alur" class="hover:text-emerald-400 transition">Alur Sertifikasi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Unit Resmi YAIS</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> LP3H YAIS</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> LPH YAIS</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Yayasan Ibadiya Al Shalihun</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 HALAL CENTER YAIS (Yayasan Ibadiya Al Shalihun). Hak Cipta Dilindungi.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-facebook text-base"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-instagram text-base"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-youtube text-base"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Details: LP3H YAIS -->
+    <div id="modal-lp3h" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl transform scale-95 transition-transform duration-300">
+            <button onclick="closeModal('modal-lp3h')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="w-10 h-10 rounded-xl bg-emeraldCustom-100 text-emeraldCustom-800 flex items-center justify-center text-lg font-bold">
+                    <i class="fas fa-users-cog"></i>
+                </span>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900">LP3H YAIS</h3>
+                    <p class="text-xs text-emeraldCustom-700 font-bold">Lembaga Pendamping Proses Produk Halal</p>
+                </div>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                <p>
+                    <strong>LP3H YAIS</strong> adalah lembaga resmi di bawah Yayasan Ibadiya Al Shalihun yang difokuskan untuk pendampingan Pelaku Usaha Mikro dan Kecil (UMKM) dalam memenuhi ketentuan pernyataan halal (Self Declare).
+                </p>
+                <h4 class="font-bold text-slate-800 text-base">Tugas & Fungsi Utama LP3H YAIS:</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Merekrut, melatih, dan menaungi para Pendamping PPH bersertifikasi resmi.</li>
+                    <li>Mendampingi UMKM dalam mengidentifikasi kehalalan bahan baku & proses produksi.</li>
+                    <li>Memverifikasi data pengajuan pada sistem SIHALAL BPJPH.</li>
+                    <li>Menyelenggarakan sosialisasi serta literasi halal secara inklusif.</li>
+                </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+                <button onclick="closeModal('modal-lp3h')" class="px-6 py-2.5 bg-emeraldCustom-800 text-white font-bold rounded-xl text-sm hover:bg-emeraldCustom-900 transition">
+                    Tutup Detail
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Details: LPH YAIS -->
+    <div id="modal-lph" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl transform scale-95 transition-transform duration-300">
+            <button onclick="closeModal('modal-lph')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <span class="w-10 h-10 rounded-xl bg-amber-100 text-goldCustom-700 flex items-center justify-center text-lg font-bold">
+                    <i class="fas fa-microscope"></i>
+                </span>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900">LPH YAIS</h3>
+                    <p class="text-xs text-goldCustom-700 font-bold">Lembaga Pemeriksa Halal</p>
+                </div>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                <p>
+                    <strong>LPH YAIS</strong> berwenang melakukan kegiatan pemeriksaan dan/atau pengujian kehalalan produk untuk jalur reguler, industri menengah, skala besar, maupun usaha berbasis risiko khusus.
+                </p>
+                <h4 class="font-bold text-slate-800 text-base">Wewenang & Cakupan Kerja LPH YAIS:</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Memeriksa keabsahan dokumen Sistem Jaminan Produk Halal (SJPH).</li>
+                    <li>Melakukan audit & pemeriksaan langsung ke lokasi pabrik/produksi.</li>
+                    <li>Menguji sampel produk di laboratorium terakreditasi bila terdapat indikasi kritis.</li>
+                    <li>Menyusun laporan hasil pemeriksaan halal untuk disidangkan di Komite Fatwa MUI.</li>
+                </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+                <button onclick="closeModal('modal-lph')" class="px-6 py-2.5 bg-goldCustom-600 text-white font-bold rounded-xl text-sm hover:bg-goldCustom-700 transition">
+                    Tutup Detail
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client-side Interactive Logic -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fas fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fas fa-times text-2xl';
+            }
+        });
+
+        // Interactive Certification Workflow Logic
+        function setWorkflowStep(stepNumber) {
+            // Hide all workflow panels
+            for (let i = 1; i <= 4; i++) {
+                const panel = document.getElementById(`workflow-content-${i}`);
+                const btn = document.getElementById(`step-btn-${i}`);
+                
+                if (panel) panel.classList.add('hidden');
+                if (btn) {
+                    btn.className = 'workflow-btn p-4 rounded-2xl bg-emeraldCustom-800/80 text-white font-bold text-center transition border-2 border-transparent hover:border-emeraldCustom-600';
+                }
+            }
+
+            // Show target step
+            const activePanel = document.getElementById(`workflow-content-${stepNumber}`);
+            const activeBtn = document.getElementById(`step-btn-${stepNumber}`);
+
+            if (activePanel) activePanel.classList.remove('hidden');
+            if (activeBtn) {
+                activeBtn.className = 'workflow-btn p-4 rounded-2xl bg-goldCustom-500 text-slate-950 font-bold text-center transition border-2 border-goldCustom-500 shadow-lg';
+            }
+        }
+
+        // Accordion FAQ Logic
+        function toggleFaq(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Modal Handler
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.children[0].classList.remove('scale-95');
+                modal.children[0].classList.add('scale-100');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modal.children[0].classList.remove('scale-100');
+                modal.children[0].classList.add('scale-95');
+            }
+        }
+
+        // WhatsApp Form Integration
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const business = document.getElementById('form-business').value;
+            const phone = document.getElementById('form-phone').value;
+            const service = document.getElementById('form-service').value;
+            const message = document.getElementById('form-message').value;
+
+            const targetPhone = "6281200000000"; // Nomor WhatsApp Sekretariat Halal Center YAIS
+
+            const text = `Halo Admin Halal Center YAIS (Yayasan Ibadiya Al Shalihun),\n\nSaya ingin berkonsultasi mengenai Sertifikasi Halal.\n\n*Nama:* ${name}\n*Usaha:* ${business}\n*No. HP:* ${phone}\n*Layanan:* ${service}\n*Pesan:* ${message}`;
+
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/${targetPhone}?text=${encodedText}`, '_blank');
+        }
+    </script>
+</body>
+</html>
